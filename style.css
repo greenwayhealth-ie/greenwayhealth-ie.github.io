@@ -1,0 +1,132 @@
+.button-link {
+    line-height: 1;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: #cd2220;
+    border-radius: 5px;
+    border-width: 0;
+    text-decoration: none;
+    padding: 16px 24px;
+	display: inline-block;
+	border: none;
+	overflow-wrap: break-word;
+}
+
+.columns {
+	display: flex;
+	margin-bottom: 28px;
+	flex-wrap: wrap
+}
+
+@media (min-width:782px) {
+	.columns {
+		flex-wrap: nowrap
+	}
+}
+
+.columns.has-background {
+	padding: 20px 38px
+}
+
+.column {
+	flex-grow: 1;
+	min-width: 0;
+	word-break: break-word;
+	overflow-wrap: break-word
+}
+
+@media (max-width:599px) {
+	.column {
+		flex-basis: 100%!important
+	}
+}
+
+@media (min-width:600px) and (max-width:781px) {
+	.column {
+		flex-basis: calc(50% - 16px)!important;
+		flex-grow: 0
+	}
+	.column:nth-child(2n) {
+		margin-left: 32px
+	}
+}
+
+@media (min-width:782px) {
+	.column {
+		flex-basis: 0;
+		flex-grow: 1
+	}
+	.column[style*=flex-basis] {
+		flex-grow: 0
+	}
+	.column:not(:first-child) {
+		margin-left: 32px
+	}
+}
+
+.cover, .cover-image {
+	position: relative;
+	background-size: cover;
+	background-position: 50%;
+	min-height: 430px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 16px
+}
+
+
+.cover-image.has-background-dim:before,
+.cover.has-background-dim:before {
+	content: "";
+	background-color: inherit
+}
+
+.cover-image.has-background-dim:not(.has-background-gradient):before,
+.cover-image .cover__gradient-background,
+.cover.has-background-dim:not(.has-background-gradient):before,
+.cover .cover__gradient-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1
+}
+
+.cover-image.has-background-dim:not(.has-background-gradient):before,
+.cover-image .cover__gradient-background,
+.cover.has-background-dim:not(.has-background-gradient):before,
+.cover .cover__gradient-background {
+	opacity: .5
+}
+
+.cover-image.has-background-dim.has-background-dim-70:not(.has-background-gradient):before,
+.cover.has-background-dim.has-background-dim-70:not(.has-background-gradient):before {
+	opacity: .7
+}
+
+.cover-image.has-background-dim.has-background-dim-70 .cover__gradient-background,
+.cover.has-background-dim.has-background-dim-70 .cover__gradient-background {
+	opacity: .7
+}
+
+.cover-image.has-background-dim.has-background-dim-80:not(.has-background-gradient):before,
+.cover.has-background-dim.has-background-dim-80:not(.has-background-gradient):before {
+	opacity: .8
+}
+
+.cover-image .cover__inner-container,
+.cover .cover__inner-container {
+	width: calc(100% - 70px);
+	z-index: 1;
+	color: #f8f9f9
+}
+
+.has-text-align-center {
+	text-align: center
+}
